@@ -25,3 +25,8 @@ body {
   line-height: 1.5;
   text-rendering: optimizeSpeed;
 }
+
+button, input, [tabIndex] {
+  outline: none;
+  border: none;
+}
