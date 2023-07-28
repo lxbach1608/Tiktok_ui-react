@@ -24,13 +24,19 @@
     border-radius: 92px;
     display: flex;
     position: relative;
+    border: 1.5px solid transparent;
 
     input {
         font-size: 1.6rem;
+        caret-color: var(--primary);
         background-color: transparent;
         height: 100%;
         padding-left: 16px;
         flex: 1;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn {
+        color: #000;
     }
 
     &::after {
@@ -41,6 +47,16 @@
         background: rgba(22, 24, 35, .12);
         right: 52px;
         top: calc((var(--search-height) - 28px) / 2);
+    }
+
+    &:focus-within {
+        border-color: rgba(22, 24, 35, .2);
+
+    }
+
+    &:hover .search-btn {
+        background-color: rgba(22, 24, 35, 0.06);
+        color: #000;
     }
 }
 
@@ -56,8 +72,14 @@
     font-size: 1.8rem;
     width: var(--search-btn-width);
     height: 100%;
+    color: rgba(22, 24, 35, 0.34);;
     border-top-right-radius: 92px;
     border-bottom-right-radius: 92px;
+    cursor: pointer;
+
+    &:hover {
+        
+    }
 }
 .action {
 
