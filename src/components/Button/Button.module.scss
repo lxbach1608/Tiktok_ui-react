@@ -1,5 +1,4 @@
 .wrapper {
-    width: auto;
     padding: 0 16px;
     height: 36px;
     border: 1px solid rgba(22, 24, 35, 0.12);
@@ -51,6 +50,10 @@
     border-radius: 4px;
 }
 
+.full_width {
+    width: 100%;
+}
+
 // Size
 .small {
     border-radius: 999px;
@@ -69,7 +72,13 @@
     }
 }
 
-.leftIcon + .title,
-.title + .rightIcon {
-    margin-left: 4px;
+.icon + .title,
+.title + .icon {
+    margin-left: 8px;
+}
+
+.icon {
+    width: 24px;
+    font-size: 1.8rem;
+    display: inline-block;
 }

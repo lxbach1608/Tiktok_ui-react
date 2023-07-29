@@ -2,15 +2,46 @@ import Tippy from '@tippyjs/react/headless';
 // import 'tippy.js/dist/tippy.css'; // optional
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import classNames from 'classnames/bind';
-import { faCircleXmark, faSpinner, faMagnifyingGlass, faPlus } from '@fortawesome/free-solid-svg-icons';
+import {
+    faCircleXmark,
+    faSpinner,
+    faMagnifyingGlass,
+    faPlus,
+    faEllipsisVertical,
+    faLanguage,
+    faCircleQuestion,
+    faKeyboard,
+    faMoon,
+} from '@fortawesome/free-solid-svg-icons';
 
 import images from '~/assets/img';
 import styles from './Header.module.scss';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
 import AccountItem from '~/components/AccountItem';
 import Button from '~/components/Button';
+import Menu from '~/components/Popper/Menu';
 
 const cx = classNames.bind(styles);
+
+const MENU_ITEMS = [
+    {
+        title: 'English',
+        icon: <FontAwesomeIcon icon={faLanguage} />,
+    },
+    {
+        title: 'Feedback and help',
+        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        to: '/feedback',
+    },
+    {
+        title: 'Keyboard shortcuts',
+        icon: <FontAwesomeIcon icon={faKeyboard} />,
+    },
+    {
+        title: 'Dark mode',
+        icon: <FontAwesomeIcon icon={faMoon} />,
+    },
+];
 
 function Header() {
     return (
@@ -50,8 +81,14 @@ function Header() {
                         <span>Upload</span>
                     </Button>
                     <Button primary>
-                        <span>Login</span>
+                        <span>Log in</span>
                     </Button>
+
+                    <Menu items={MENU_ITEMS}>
+                        <button className={cx('more-btn')}>
+                            <FontAwesomeIcon icon={faEllipsisVertical} />
+                        </button>
+                    </Menu>
                 </div>
             </div>
         </header>

@@ -1,0 +1,21 @@
+.menu-list {
+    width: 223px;
+    margin-top: 2px;
+
+    .menu-item {
+        width: 100%;
+        margin-left: 0;
+        border-color: transparent;
+        padding: 10px 16px;
+        height: 41px;
+        text-align: start;
+    }
+
+    .wrapper {
+        margin-left: 0;
+    }
+}
+
+.wrapper-popper {
+    padding: 8px 0;
+}
