@@ -26,6 +26,7 @@ import Menu from '~/components/Popper/Menu';
 import { Fragment } from 'react';
 import { faBookmark, faMessage, faPaperPlane, faUser } from '@fortawesome/free-regular-svg-icons';
 import { faTiktok } from '@fortawesome/free-brands-svg-icons';
+import { MessageIcon, NotificationIcon } from '~/components/Icons';
 
 const cx = classNames.bind(styles);
 
@@ -136,12 +137,12 @@ function Header() {
                         <Fragment>
                             <Tippy content="Messages">
                                 <button className={cx('user-icon')}>
-                                    <FontAwesomeIcon icon={faPaperPlane} />
+                                    <MessageIcon />
                                 </button>
                             </Tippy>
                             <Tippy content="Inbox">
                                 <button className={cx('user-icon')}>
-                                    <FontAwesomeIcon icon={faMessage} />
+                                    <NotificationIcon />
                                 </button>
                             </Tippy>
                         </Fragment>

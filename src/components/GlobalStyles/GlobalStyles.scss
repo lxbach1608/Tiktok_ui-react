@@ -1,5 +1,4 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@600&family=Lato:wght@700&family=Roboto:wght@400;500;700&display=swap');
 
 :root {
     --text-white: #fff;
@@ -21,9 +20,7 @@ html {
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    font-family: 'Lato', sans-serif;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'TikTokFont', 'arial';
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
@@ -54,4 +51,22 @@ input,
 
 .tippy-arrow {
     color: rgba(84, 84, 84, 1.62);
+}
+
+@font-face {
+    font-family: 'TikTokFont';
+    src: url('/assets/fonts/TikTokFont-Bold.woff2');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'TikTokFont';
+    src: url('/assets/fonts/TikTokFont-Regular.woff2');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'TikTokFont';
+    src: url('/assets/fonts/TikTokDisplayFont-Semibold.woff2');
+    font-weight: 500;
 }
