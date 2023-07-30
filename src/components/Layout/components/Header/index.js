@@ -27,6 +27,19 @@ const MENU_ITEMS = [
     {
         title: 'English',
         icon: <FontAwesomeIcon icon={faLanguage} />,
+        children: {
+            title: 'Language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng việt',
+                },
+            ],
+        },
     },
     {
         title: 'Feedback and help',
@@ -43,6 +56,11 @@ const MENU_ITEMS = [
     },
 ];
 
+// Handle logic change items
+const handleChangeItem = (menuItem) => {
+    console.log(menuItem);
+};
+
 function Header() {
     return (
         <header className={cx('wrapper')}>
@@ -51,7 +69,8 @@ function Header() {
                     <img src={images.logo} alt="tikTok" />
                 </div>
                 <Tippy
-                    visible={true}
+                    visible
+                    placement="bottom-end"
                     interactive
                     render={(attrs) => (
                         <div className={cx('search-result')} tabIndex="-1" {...attrs}>
@@ -84,7 +103,7 @@ function Header() {
                         <span>Log in</span>
                     </Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleChangeItem}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>

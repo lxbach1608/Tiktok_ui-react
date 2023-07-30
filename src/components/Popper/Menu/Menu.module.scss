@@ -19,3 +19,23 @@
 .wrapper-popper {
     padding: 8px 0;
 }
+
+// Header submenu
+.header {
+    display: flex;
+    position: relative;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+    margin-top: -8px;
+
+    .icon {
+        position: absolute;
+        left: 28px;
+    }
+
+    .title {
+        flex: 1;
+        font-weight: 400;
+    }
+}

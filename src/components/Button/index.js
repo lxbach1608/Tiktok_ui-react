@@ -21,8 +21,6 @@ function Button({
 }) {
     var Comp = 'button';
 
-    console.log(leftIcon);
-
     var classes = cx('wrapper', {
         primary,
         outline,

@@ -1,5 +1,6 @@
 .wrapper {
-    --search-height: 42px;
+    --search-height: 46px;
+    --search-width: 500px;
     --search-btn-width: 52px;
 
     display: flex;
@@ -19,7 +20,7 @@
 
 .search,
 .search-result {
-    width: 410px;
+    width: var(--search-width);
 }
 
 .search {
@@ -91,7 +92,9 @@
 }
 
 .more-btn {
-    margin-left: 24px;
+    width: 20px;
+    margin-left: 16px;
+    padding: 0 4px;
     font-size: 16px;
     background-color: transparent;
 }
