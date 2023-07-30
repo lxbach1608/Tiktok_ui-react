@@ -9,6 +9,10 @@
         padding: 10px 16px;
         height: 41px;
         text-align: start;
+
+        &.separate {
+            border-top: 1px solid rgba(22, 24, 35, 0.12);
+        }
     }
 
     .wrapper {

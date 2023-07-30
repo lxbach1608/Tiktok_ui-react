@@ -35,3 +35,23 @@ input,
     outline: none;
     border: none;
 }
+
+// custome tippy
+.tippy-box {
+    border-radius: 7px;
+}
+
+.tippy-content {
+    border-radius: 8px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.03px;
+    background-color: rgba(84, 84, 84, 0.92);
+    color: rgb(255, 255, 255);
+    padding: 8px;
+}
+
+.tippy-arrow {
+    color: rgba(84, 84, 84, 1.62);
+}

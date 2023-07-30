@@ -98,3 +98,22 @@
     font-size: 16px;
     background-color: transparent;
 }
+
+// User login
+.action {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.user-icon {
+    background-color: transparent;
+    font-size: 21px;
+}
+
+.avt {
+    width: 32px;
+    height: 32px;
+    object-fit: 1;
+    border-radius: 50%;
+}
