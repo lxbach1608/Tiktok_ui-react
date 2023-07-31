@@ -6,6 +6,7 @@ import classNames from 'classnames/bind';
 import Styles from './Search.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect, useRef, useState } from 'react';
+import { useDebounce } from '~/hooks';
 
 const cx = classNames.bind(Styles);
 
@@ -15,6 +16,8 @@ function Search() {
     const [show, setShow] = useState(true);
     const [loading, setLoading] = useState(false);
 
+    const debounced = useDebounce(searchValue, 500);
+
     const inputRef = useRef();
 
     const handleClickOutside = () => {
@@ -22,21 +25,21 @@ function Search() {
     };
 
     useEffect(() => {
-        if (!searchValue.trim()) {
+        if (!debounced.trim()) {
             setResults([]);
             return;
         }
 
         setLoading(true);
 
-        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(searchValue)}&type=less`)
+        fetch(`https://tiktok.fullstack.edu.vn/api/users/search?q=${encodeURIComponent(debounced)}&type=less`)
             .then((res) => res.json())
             .then((res) => {
                 setResults(res.data);
                 setLoading(false);
             })
             .catch((err) => setLoading(false));
-    }, [searchValue]);
+    }, [debounced]);
 
     return (
         <TippyHeadless
