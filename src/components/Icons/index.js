@@ -2,7 +2,6 @@ export const MessageIcon = ({ width = '2.6rem', height = '2.6rem', className }) 
     <svg
         className={className}
         width={width}
-        dataE2e=""
         height={height}
         viewBox="0 0 48 48"
         fill="currentColor"
@@ -18,9 +17,8 @@ export const MessageIcon = ({ width = '2.6rem', height = '2.6rem', className }) 
 
 export const NotificationIcon = ({ width = '2.6rem', height = '2.6rem', className }) => (
     <svg
-        class={className}
+        className={className}
         width={width}
-        dataE2e=""
         height={height}
         viewBox="3 3 24 24"
         fill="currentColor"
